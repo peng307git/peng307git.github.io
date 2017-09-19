@@ -1,0 +1,219 @@
+@CHARSET "UTF-8";
+/****************播放器控件样式*******************/
+/*全屏下隐藏默认的视频控件*/
+video::-webkit-media-controls {
+  display:none !important;
+}
+ #myVideo{                       /*必须设置宽度*/
+    width: 1026px;         
+}
+.video{                         /*必须设置宽度和定位*/
+    width: 1026px;
+    position: relative;
+}
+#myControls{
+    width: 100%;
+    height: 47px;
+    line-height: 47px;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    bottom: 2px;
+}
+#myControls > div{
+    float: left;
+    height: 47px;
+    line-height: 47px;
+}
+#myControls .play-left{
+    width: 12%;
+}
+#myControls .play-bar{
+    width: 73%;
+}
+#myControls .play-right{
+    width: 15%;
+}
+#myControls .play-onoff{
+    width: 31%;
+    float: left;
+}
+#myControls .play-time{
+    width:54%;
+    font-size: 12px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    margin-left: 2%;
+}
+#myControls .play-fullScreen{
+    width: 23%;
+    float: right;
+}
+#myControls .play-clickedMetu{
+    width: 39%;
+    float: left;
+    margin-left: 5%;
+}
+#myControls .play-metu{
+    width: 22%;
+    float: left;
+}
+
+#myControls span{
+    display:inline-block;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    float: right;
+    background: url('../images/video_icon.png') no-repeat;
+    background-size: 100%;
+}
+#myControls .onoff-play{
+    margin-top: 12px;
+    background-position: 0px 0px;
+}
+#myControls .onoff-play:hover{
+    background-position: 0px -30px;
+}
+#myControls .clickplay{
+    background-position: 0px -60px;
+}
+#myControls .clickplay:hover{
+    background-position: 0px -90px;
+}
+#myControls .play-time i{
+    font-style: normal;
+}
+#myControls .playMetu{
+    margin-top: 12px;
+    background-position: 0px -120px;
+}
+#myControls .playMetu:hover{
+    background-position: 0px -150px;
+}
+#myControls .metu-no{
+    background-position: 0px -240px;
+}
+#myControls .metu-no:hover{
+    background-position: 0px -270px;
+}
+#myControls .fullScreen{
+    float: left;
+    margin-top: 12px;
+    background-position: 0px -180px;
+}
+#myControls .fullScreen:hover{
+    background-position: 0px -210px;
+}
+#myControls .fullScreenhover{
+    background-position: 0px -300px;
+}
+#myControls .fullScreenhover:hover{
+    background-position: 0px -330px;
+}
+/*进度条*/
+.play-bar .progressBar{
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background: #555;
+    border-radius: 100px;
+    margin: 0;
+    margin-top: 22px;
+}
+.play-bar .timeBar{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 0;
+   height: 100%;
+   background-color: #1dc9b9;
+   border-radius: 100px;
+   z-index: 2;
+}
+.play-bar .boeridus{
+    position: absolute;
+    left: -6px;
+    top: -4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background: #1dc9b9;
+    z-index: 5;
+}
+.play-bar .bufferBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1dc9b9;
+    border-radius: 100px;
+    opacity: 0.5;
+    z-index: 1;
+}
+.play-clickedMetu .volumeBar{
+    width: 100%;
+    margin-top: 23px;
+    height: 2px;
+    background: #616161;
+    border-radius: 100px;
+    position: relative;
+}
+.play-clickedMetu .volume{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+}
+.play-clickedMetu .volumegarden{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: #fff;
+    top:-3px;
+    left: 0;
+    z-index: 5;
+
+}
+.play{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: red;
+    left: 50%;
+    color: #fff;
+    line-height: 100px;
+    text-align: center;
+    top: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+/*全屏设置*/
+.videoMaxZidex{
+    width: 100%;
+    margin: 0;
+}
+.maxZindex{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2147483648 !important;
+}
+@media screen and (max-width: 1170px) {
+    .video{                         /*必须设置宽度和定位*/
+        width: 100%;
+
+    }
+     #myVideo{                       /*必须设置宽度*/
+        width: 100%;         
+    }
+    #myControls{
+        display:none !important;
+    }
+}
